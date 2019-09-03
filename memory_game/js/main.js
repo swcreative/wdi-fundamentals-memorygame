@@ -17,29 +17,50 @@ console.log("Up and running!");
 var cards = ["queen", "queen", "king", "king"];
 var cardsInPlay = [];
 
-//create a variable to represent the first card that the user flips
-var cardOne = cards[0];
-
-//add this first card to the 'cardsInPlay' array
-cardsInPlay.push(cardOne);
-
-//use console.log() to display the card that the user flipped
-console.log("User flipped " + cardOne);
-
-//create a second variable to represent the second card that the user flipped
-var cardTwo = cards[2];
-
-//add this second card to the 'cardsInPlay' array
-cardsInPlay.push(cardTwo);
-
-//use console.log() to display the card that the user flipped
-console.log("User flipped " + cardTwo);
+//checks if the cardsInPlay match each other
+function checkForMatch(){
+	if(cardsInPlay[0] === cardsInPlay[1]){
+		console.log("You found a match!");
+		} else {
+		console.log("Sorry, try again.");
+	}	
+}
 
 //write an if statement to check if the length of the cardsInPlay array is 2
-if (cardsInPlay.length === 2) {
-	if(cardsInPlay[0] === cardsInPlay[1]){
-		alert("You found a match!");
-	} else {
-		alert("Sorry, try again.");
-	}
+
+
+//function flipcard followed by function checkForMatch
+function flipCard(cardId){
+	console.log("User flipped " + cards[cardId]);
+
+	cardsInPlay.push(cards[cardId]);
+
+	if (cardsInPlay.length === 2) {
+		checkForMatch();
+		return;
+	}	
+
+//All to be deleted
+	//create a variable to represent the first card that the user flips
+	//var cardOne = cards[0];
+
+	//add this first card to the 'cardsInPlay' array
+	//cardsInPlay.push(cardOne);
+
+	//use console.log() to display the card that the user flipped
+	//console.log("User flipped " + cardOne);
+
+	//create a second variable to represent the second card that the user flipped
+	//var cardTwo = cards[2];
+
+	//add this second card to the 'cardsInPlay' array
+	//cardsInPlay.push(cardTwo);
+
+	//use console.log() to display the card that the user flipped
+	//console.log("User flipped " + cardTwo);	
 }
+
+
+
+flipCard(0);
+flipCard(2);
