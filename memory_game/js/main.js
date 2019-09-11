@@ -2,17 +2,6 @@
 //Confirm JS file is connected to the index.html file
 console.log("Up and running!");
 
-
-//create four variables that simulate the cards in the game
-// var cardOne = "queen";
-// var cardTwo = "queen";
-// var cardThree = "king";
-// var cardFour = "king";
-
-//Use console.log to display the value of two cards picked
-// console.log("User flipped " + cardTwo);
-// console.log("User flipped " + cardFour);
-
 //create an array 'cards' to hold four strings, one for each of our cards
 var cards = [
 	{
@@ -48,8 +37,6 @@ function checkForMatch(){
 	}	
 }
 
-//write an if statement to check if the length of the cardsInPlay array is 2
-
 
 //function flipcard followed by function checkForMatch
 function flipCard(){
@@ -72,8 +59,6 @@ function flipCard(){
 	}		
 }
 
-// flipCard(0);
-// flipCard(2);
 
 function createBoard(){
 	console.log("Hello");
